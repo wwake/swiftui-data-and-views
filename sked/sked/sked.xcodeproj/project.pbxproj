@@ -16,6 +16,7 @@
 		917786F7296B826000F5278F /* skedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917786F6296B826000F5278F /* skedUITestsLaunchTests.swift */; };
 		91778704296B839900F5278F /* RoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778703296B839900F5278F /* RoomsTests.swift */; };
 		91778707296B83F500F5278F /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778706296B83F500F5278F /* Rooms.swift */; };
+		91778709296B85DE00F5278F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778708296B85DE00F5278F /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		917786F6296B826000F5278F /* skedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		91778703296B839900F5278F /* RoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTests.swift; sourceTree = "<group>"; };
 		91778706296B83F500F5278F /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		91778708296B85DE00F5278F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				91778706296B83F500F5278F /* Rooms.swift */,
+				91778708296B85DE00F5278F /* Room.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				917786DB296B825D00F5278F /* ContentView.swift in Sources */,
 				917786D9296B825D00F5278F /* skedApp.swift in Sources */,
+				91778709296B85DE00F5278F /* Room.swift in Sources */,
 				91778707296B83F500F5278F /* Rooms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

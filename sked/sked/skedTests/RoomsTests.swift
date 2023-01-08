@@ -6,4 +6,13 @@ final class RoomsTests: XCTestCase {
     let rooms = Rooms()
     XCTAssertEqual(rooms.count, 0)
   }
+  
+  func test_oneRoom() {
+    let rooms = Rooms()
+    let room = Room("elbow")
+    
+    rooms.add(room)
+    
+    XCTAssertEqual(rooms.all, [room])
+  }
 }
