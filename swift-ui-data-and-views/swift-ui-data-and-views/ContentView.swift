@@ -14,6 +14,10 @@ public class MyModel: ObservableObject {
   }
 }
 
+public class Reservation: ObservableObject {
+  @Published public var item: String = ""
+}
+
 struct ContentView: View {
   @State private var nextSlot = 0
   @State private var selection = 0
