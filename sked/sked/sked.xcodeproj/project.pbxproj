@@ -14,6 +14,8 @@
 		917786EB296B826000F5278F /* skedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917786EA296B826000F5278F /* skedTests.swift */; };
 		917786F5296B826000F5278F /* skedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917786F4296B826000F5278F /* skedUITests.swift */; };
 		917786F7296B826000F5278F /* skedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917786F6296B826000F5278F /* skedUITestsLaunchTests.swift */; };
+		91778704296B839900F5278F /* RoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778703296B839900F5278F /* RoomsTests.swift */; };
+		91778707296B83F500F5278F /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778706296B83F500F5278F /* Rooms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		917786F0296B826000F5278F /* skedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		917786F4296B826000F5278F /* skedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skedUITests.swift; sourceTree = "<group>"; };
 		917786F6296B826000F5278F /* skedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91778703296B839900F5278F /* RoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTests.swift; sourceTree = "<group>"; };
+		91778706296B83F500F5278F /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		917786D7296B825D00F5278F /* sked */ = {
 			isa = PBXGroup;
 			children = (
+				91778705296B83DF00F5278F /* Model */,
 				917786D8296B825D00F5278F /* skedApp.swift */,
 				917786DA296B825D00F5278F /* ContentView.swift */,
 				917786DC296B825F00F5278F /* Assets.xcassets */,
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				917786EA296B826000F5278F /* skedTests.swift */,
+				91778703296B839900F5278F /* RoomsTests.swift */,
 			);
 			path = skedTests;
 			sourceTree = "<group>";
@@ -127,6 +133,14 @@
 				917786F6296B826000F5278F /* skedUITestsLaunchTests.swift */,
 			);
 			path = skedUITests;
+			sourceTree = "<group>";
+		};
+		91778705296B83DF00F5278F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91778706296B83F500F5278F /* Rooms.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,7 @@
 			files = (
 				917786DB296B825D00F5278F /* ContentView.swift in Sources */,
 				917786D9296B825D00F5278F /* skedApp.swift in Sources */,
+				91778707296B83F500F5278F /* Rooms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91778704296B839900F5278F /* RoomsTests.swift in Sources */,
 				917786EB296B826000F5278F /* skedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
