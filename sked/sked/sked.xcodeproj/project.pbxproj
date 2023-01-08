@@ -102,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				91778705296B83DF00F5278F /* Model */,
+				9177870B296B894000F5278F /* View */,
 				917786D8296B825D00F5278F /* skedApp.swift */,
-				917786DA296B825D00F5278F /* ContentView.swift */,
 				917786DC296B825F00F5278F /* Assets.xcassets */,
 				917786E1296B825F00F5278F /* sked.entitlements */,
 				917786DE296B825F00F5278F /* Preview Content */,
@@ -144,6 +144,14 @@
 				91778708296B85DE00F5278F /* Room.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9177870B296B894000F5278F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				917786DA296B825D00F5278F /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
