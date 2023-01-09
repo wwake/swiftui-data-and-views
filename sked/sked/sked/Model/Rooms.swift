@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Rooms {
+public class Rooms : ObservableObject {
   private var rooms: [Room] = []
   
   public var count: Int { 0 }
