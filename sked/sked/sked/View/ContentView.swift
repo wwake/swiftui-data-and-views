@@ -12,44 +12,13 @@ struct ContentView: View {
   
   @State private var showRooms = false
   
-  @State private var roomName: String = ""
-  
   var body: some View {
     VStack {
       Button("Rooms") {
         showRooms = true
       }
       .sheet(isPresented: $showRooms) {
-        VStack {
-          Text("Rooms")
-            .font(.title)
-          
-          HStack {
-            TextField("New room name", text: $roomName)
-              .onSubmit {
-                print("submitted \(roomName)")
-                rooms.add(Room(roomName))
-                roomName = ""
-              }
-
-            Button(action: {
-              rooms.add(Room(roomName))
-              roomName = ""
-            }) {
-              Text("Add")
-            }
-          }
-          List {
-            ForEach(rooms.all) {
-              Text(verbatim: $0.description)
-            }
-            .onDelete { indexSet in }
-          }
-          
-          Button("Done") {
-            showRooms = false
-          }
-        }
+        RoomsView(rooms: rooms, showRooms: $showRooms)
         .padding()
         .frame(width: 400, height: 500)
       }
