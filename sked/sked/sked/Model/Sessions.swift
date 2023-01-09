@@ -9,7 +9,7 @@ import Foundation
 
 public class Session {}
 
-public class Classes : ObservableObject {
+public class Sessions : ObservableObject {
   private var classes: [Session] = []
   
   public var count: Int {

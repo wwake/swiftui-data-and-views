@@ -17,8 +17,8 @@
 		91778704296B839900F5278F /* RoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778703296B839900F5278F /* RoomsTests.swift */; };
 		91778707296B83F500F5278F /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778706296B83F500F5278F /* Rooms.swift */; };
 		91778709296B85DE00F5278F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778708296B85DE00F5278F /* Room.swift */; };
-		9177870D296BA3EB00F5278F /* ClassesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177870C296BA3EB00F5278F /* ClassesTests.swift */; };
-		9177870F296BA57D00F5278F /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177870E296BA57D00F5278F /* Classes.swift */; };
+		9177870D296BA3EB00F5278F /* SessionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177870C296BA3EB00F5278F /* SessionsTests.swift */; };
+		9177870F296BA57D00F5278F /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177870E296BA57D00F5278F /* Sessions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		91778703296B839900F5278F /* RoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTests.swift; sourceTree = "<group>"; };
 		91778706296B83F500F5278F /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		91778708296B85DE00F5278F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		9177870C296BA3EB00F5278F /* ClassesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesTests.swift; sourceTree = "<group>"; };
-		9177870E296BA57D00F5278F /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		9177870C296BA3EB00F5278F /* SessionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTests.swift; sourceTree = "<group>"; };
+		9177870E296BA57D00F5278F /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 			children = (
 				917786EA296B826000F5278F /* skedTests.swift */,
 				91778703296B839900F5278F /* RoomsTests.swift */,
-				9177870C296BA3EB00F5278F /* ClassesTests.swift */,
+				9177870C296BA3EB00F5278F /* SessionsTests.swift */,
 			);
 			path = skedTests;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 			children = (
 				91778706296B83F500F5278F /* Rooms.swift */,
 				91778708296B85DE00F5278F /* Room.swift */,
-				9177870E296BA57D00F5278F /* Classes.swift */,
+				9177870E296BA57D00F5278F /* Sessions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 				917786DB296B825D00F5278F /* ContentView.swift in Sources */,
 				917786D9296B825D00F5278F /* skedApp.swift in Sources */,
 				91778709296B85DE00F5278F /* Room.swift in Sources */,
-				9177870F296BA57D00F5278F /* Classes.swift in Sources */,
+				9177870F296BA57D00F5278F /* Sessions.swift in Sources */,
 				91778707296B83F500F5278F /* Rooms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +304,7 @@
 			files = (
 				91778704296B839900F5278F /* RoomsTests.swift in Sources */,
 				917786EB296B826000F5278F /* skedTests.swift in Sources */,
-				9177870D296BA3EB00F5278F /* ClassesTests.swift in Sources */,
+				9177870D296BA3EB00F5278F /* SessionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
