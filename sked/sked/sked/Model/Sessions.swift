@@ -7,12 +7,19 @@
 
 import Foundation
 
-public class Session {}
-
 public class Sessions : ObservableObject {
-  private var classes: [Session] = []
+  private var sessions: [Session] = []
   
   public var count: Int {
-    classes.count
+    sessions.count
+  }
+  
+  public func add(_ session: Session) {
+    sessions.append(session)
+    sessions.sort()
+  }
+  
+  public var all: [Session] {
+    sessions
   }
 }

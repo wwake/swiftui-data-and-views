@@ -10,7 +10,16 @@ import XCTest
 
 final class SessionsTests : XCTestCase {
   func test_startsEmpty() {
-    let classes = Sessions()
-    XCTAssertEqual(classes.count, 0)
+    let sessions = Sessions()
+    XCTAssertEqual(sessions.count, 0)
+  }
+  
+  func test_oneSession() {
+    let sessions = Sessions()
+    let session = Session(name: "Only", duration: 2)
+    
+    sessions.add(session)
+    
+    XCTAssertEqual(sessions.all, [session])
   }
 }
