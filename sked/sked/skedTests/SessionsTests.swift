@@ -22,4 +22,19 @@ final class SessionsTests : XCTestCase {
     
     XCTAssertEqual(sessions.all, [session])
   }
+  
+  func test_sessionsListSortedByNameThenDuration() {
+    let sessions = Sessions()
+    let session1 = Session(name: "B", duration: 2)
+    let session2 = Session(name:"B", duration:1)
+    let session3 = Session(name: "C", duration:2)
+    let session4 = Session(name: "A", duration: 3)
+    
+    sessions.add(session1)
+    sessions.add(session2)
+    sessions.add(session3)
+    sessions.add(session4)
+    
+    XCTAssertEqual(sessions.all, [session4, session2, session1, session3])
+  }
 }
