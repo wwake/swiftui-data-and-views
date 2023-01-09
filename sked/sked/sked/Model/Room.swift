@@ -23,14 +23,14 @@ extension Room : Equatable {
   }
 }
 
-extension Room: CustomStringConvertible {
-  public var description: String {
-    name
-  } 
-}
-
 extension Room: Comparable {
   public static func < (lhs: Room, rhs: Room) -> Bool {
     lhs.name < rhs.name
   }
+}
+
+extension Room: CustomStringConvertible {
+  public var description: String {
+    name
+  } 
 }
