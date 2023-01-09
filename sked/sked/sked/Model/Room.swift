@@ -23,6 +23,12 @@ extension Room : Equatable {
   }
 }
 
+extension Room: Hashable {
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
+  }
+}
+
 extension Room: Comparable {
   public static func < (lhs: Room, rhs: Room) -> Bool {
     lhs.name < rhs.name
