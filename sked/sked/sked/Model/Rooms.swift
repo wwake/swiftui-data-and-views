@@ -8,7 +8,7 @@
 import Foundation
 
 public class Rooms : ObservableObject {
-  private var rooms: [Room] = []
+  @Published var rooms: [Room] = []
   
   public var count: Int { 0 }
   
