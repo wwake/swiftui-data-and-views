@@ -40,7 +40,7 @@ struct ContentView: View {
             }
           }
           List {
-            ForEach(rooms.all, id:\.description) {
+            ForEach(rooms.all) {
               Text(verbatim: $0.description)
             }
             .onDelete { indexSet in }

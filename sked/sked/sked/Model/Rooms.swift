@@ -13,7 +13,7 @@ public class Rooms : ObservableObject {
   public var count: Int { 0 }
   
   public func add(_ room: Room) {
-    guard !rooms.contains(room) else {return}
+    guard !rooms.contains(where: {$0.description == room.description }) else {return}
     rooms.append(room)
     rooms.sort()
   }

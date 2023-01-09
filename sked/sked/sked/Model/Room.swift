@@ -7,7 +7,9 @@
 
 import Foundation
 
-public class Room {
+public class Room : Identifiable {
+  public var id = UUID()
+  
   var name: String
   
   init(_ name: String) {
@@ -17,7 +19,7 @@ public class Room {
 
 extension Room : Equatable {
   public static func == (lhs: Room, rhs: Room) -> Bool {
-    lhs.name == rhs.name
+    lhs.id == rhs.id
   }
 }
 
