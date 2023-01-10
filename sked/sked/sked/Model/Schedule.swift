@@ -32,5 +32,6 @@ public class Schedule : ObservableObject {
     for timeslot in start..<(start + session.duration) {
       sessions[timeslot][room] = session
     }
+    session.scheduled = true
   }
 }

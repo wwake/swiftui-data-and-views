@@ -11,6 +11,7 @@ public class Session : Identifiable {
   public let id = UUID()
   var name: String
   var duration: Int
+  public var scheduled: Bool = false
   
   init(name: String, duration: Int) {
     self.name = name
