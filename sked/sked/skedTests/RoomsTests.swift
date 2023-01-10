@@ -27,6 +27,12 @@ final class RoomsTests: XCTestCase {
     XCTAssertEqual(rooms.all, [room1])
   }
   
+  func test_noEmptyRoomNames() {
+    let rooms = Rooms()
+    rooms.add(Room(""))
+    XCTAssertEqual(rooms.all, [])
+  }
+  
   func test_roomsSortedByName() {
     let rooms = Rooms()
     let room1 = Room("standing")

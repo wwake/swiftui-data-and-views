@@ -11,6 +11,7 @@ public class Rooms : ObservableObject {
   @Published var rooms: [Room] = []
     
   public func add(_ room: Room) {
+    guard room.name.count > 0 else {return}
     guard !rooms.contains(where: {$0.description == room.description }) else {return}
     rooms.append(room)
     rooms.sort()
