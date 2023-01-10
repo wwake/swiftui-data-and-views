@@ -9,9 +9,7 @@ import Foundation
 
 public class Rooms : ObservableObject {
   @Published var rooms: [Room] = []
-  
-  public var count: Int { rooms.count }
-  
+    
   public func add(_ room: Room) {
     guard !rooms.contains(where: {$0.description == room.description }) else {return}
     rooms.append(room)

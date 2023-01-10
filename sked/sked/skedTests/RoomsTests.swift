@@ -5,7 +5,6 @@ final class RoomsTests: XCTestCase {
   func test_startsEmpty() {
     let rooms = Rooms()
     XCTAssertEqual(rooms.all, [])
-    XCTAssertEqual(rooms.count, 0)
   }
   
   func test_oneRoom() {
@@ -15,7 +14,6 @@ final class RoomsTests: XCTestCase {
     rooms.add(room)
     
     XCTAssertEqual(rooms.all, [room])
-    XCTAssertEqual(rooms.count, 1)
   }
   
   func test_noDuplicateRooms() {
@@ -27,7 +25,6 @@ final class RoomsTests: XCTestCase {
     rooms.add(room2)
     
     XCTAssertEqual(rooms.all, [room1])
-    XCTAssertEqual(rooms.count, 1)
   }
   
   func test_roomsSortedByName() {
