@@ -31,7 +31,7 @@ struct ContentView: View {
           Text("Sessions")
             .font(.title)
           
-          List {
+          List { 
             ForEach(sessions.all) {
               Text(verbatim: $0.description)
             }

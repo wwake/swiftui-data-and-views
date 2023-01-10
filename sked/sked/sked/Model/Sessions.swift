@@ -8,18 +8,14 @@
 import Foundation
 
 public class Sessions : ObservableObject {
-  private var sessions: [Session] = []
+  @Published public var all: [Session] = []
   
   public var count: Int {
-    sessions.count
+    all.count
   }
   
   public func add(_ session: Session) {
-    sessions.append(session)
-    sessions.sort()
-  }
-  
-  public var all: [Session] {
-    sessions
+    all.append(session)
+    all.sort()
   }
 }
