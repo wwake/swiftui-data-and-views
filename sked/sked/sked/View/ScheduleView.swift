@@ -31,18 +31,27 @@ struct ScheduleView : View {
             .padding()
         }
       }
+      .disabled(sessions.count == 0)
+      .onChange(of: sessions.count) { newCount in 
+        if newCount == 1 { selectedSession = sessions.all.first! }
+      }
       
       Picker("Room", selection: $selectedRoom) {
         ForEach(rooms.all, id:\.self) {
           Text(verbatim: "\($0)")
         } 
       } 
-      
+      .disabled(rooms.count == 0)
+      .onChange(of: rooms.count) { newCount in 
+        if newCount == 1 { selectedRoom = rooms.all.first! }
+      }
+
       Stepper("Time (h): \(timeSlot)", value: $timeSlot, in:0...23) 
       
       Button("Schedule") {
         schedule.reserve(selectedRoom, selectedSession, start: timeSlot)
       }
+      .disabled(rooms.count == 0 || sessions.count == 0)
       
     }
   }

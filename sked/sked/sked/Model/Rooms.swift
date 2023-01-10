@@ -17,6 +17,10 @@ public class Rooms : ObservableObject {
     rooms.sort()
   }
   
+  public var count: Int {
+    rooms.count
+  }
+  
   public var all: [Room] {
     rooms
   }
