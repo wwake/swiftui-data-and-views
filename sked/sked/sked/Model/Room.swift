@@ -11,6 +11,7 @@ public class Room : Identifiable {
   public let id = UUID()
   
   var name: String
+  @Published public var scheduled : Bool = false
   
   init(_ name: String) {
     self.name = name

@@ -12,7 +12,6 @@ struct ScheduleView : View {
   @ObservedObject var rooms : Rooms
   @ObservedObject var sessions : Sessions
   @ObservedObject var schedule : Schedule
-  @Binding var showSchedule: Bool
   
   @State var selectedSession : Session
   @State var selectedRoom: Room
@@ -41,16 +40,11 @@ struct ScheduleView : View {
       
       Stepper("Time (h): \(timeSlot)", value: $timeSlot, in:0...23) 
       
-      Button("Schedule") {}
+      Button("Schedule") {
+        schedule.reserve(selectedRoom, selectedSession, start: timeSlot)
+      }
       
     }
-    
-    Spacer()
-    
-    Button("Done") {
-      showSchedule = false
-    }
-    Spacer()
   }
 }
 

@@ -28,6 +28,20 @@ struct ContentView: View {
     VStack {
       HStack {
         VStack {
+          Text("Rooms")
+            .font(.title)
+          
+          Button("Rooms") {
+            showRooms = true
+          }
+          .sheet(isPresented: $showRooms) {
+            RoomsView(rooms: rooms, showRooms: $showRooms)
+              .padding()
+              .frame(width: 400, height: 500)
+          }
+          
+          Divider()
+          
           Text("Sessions")
             .font(.title)
           
@@ -36,9 +50,7 @@ struct ContentView: View {
               Text(verbatim: $0.description)
             }
           }
-          
-          Divider()
-          
+                    
           Form {
             TextField("Session name", text: $sessionName)
             Stepper("Duration (h): \(sessionDuration)", value: $sessionDuration, in:1...23) 
@@ -51,23 +63,8 @@ struct ContentView: View {
           
           Divider()
           
-          Button("Rooms") {
-            showRooms = true
-          }
-          .sheet(isPresented: $showRooms) {
-            RoomsView(rooms: rooms, showRooms: $showRooms)
-              .padding()
-              .frame(width: 400, height: 500)
-          }
-          
-          Button("Schedule") {
-            showSchedule = true
-          }
-          .sheet(isPresented: $showSchedule) {
-            ScheduleView(rooms: rooms, sessions: sessions, schedule: schedule, showSchedule: $showSchedule, selectedSession: sessions.all.first ?? Session(name:"", duration:0), selectedRoom: rooms.all.first ?? Room(""))
-              .padding()
-              .frame(width: 400, height: 500)
-          }
+          ScheduleView(rooms: rooms, sessions: sessions, schedule: schedule, selectedSession: sessions.all.first ?? Session(name:"", duration:0), selectedRoom: rooms.all.first ?? Room(""))
+
         }
         .frame(width:300)
         
