@@ -47,6 +47,7 @@ struct ContentView: View {
           
           List { 
             ForEach(sessions.all) {
+            //  Text(verbatim: $0.scheduled ? "" : " ")
               Text(verbatim: $0.description)
             }
           }
