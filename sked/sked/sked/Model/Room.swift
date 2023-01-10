@@ -8,7 +8,7 @@
 import Foundation
 
 public class Room : Identifiable {
-  public var id = UUID()
+  public let id = UUID()
   
   var name: String
   

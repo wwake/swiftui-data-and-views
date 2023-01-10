@@ -10,7 +10,8 @@ import SwiftUI
 
 struct CalendarView: View {
   @ObservedObject var rooms : Rooms
-  
+  @ObservedObject var schedule: Schedule
+    
   var body: some View {
     VStack {
       Text("Schedule")
@@ -39,8 +40,14 @@ struct CalendarView: View {
               .font(.title2)
               .bold()
             
-            ForEach(rooms.all) { _ in 
-              Text("?")
+            ForEach(rooms.all) { room in 
+              if schedule.isReserved(room, start: time, duration: 1) {
+                Image(systemName: "square.fill")
+                  .foregroundColor(.green)
+              } else {
+                Image(systemName: "square.split.diagonal.2x2")
+                  .foregroundColor(.gray)
+              }
             }
           }
         }

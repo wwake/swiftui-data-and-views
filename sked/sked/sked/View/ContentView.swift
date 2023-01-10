@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
   @StateObject private var rooms = Rooms()
   @StateObject private var sessions = Sessions()
+  @StateObject private var schedule = Schedule(open: Session(name: "", duration: 1))
   
   @State private var showRooms = false
   
@@ -18,6 +18,11 @@ struct ContentView: View {
   
   @State private var sessionName: String = ""
   @State private var sessionDuration: Int = 1
+  
+  @State private var showSchedule = false
+  
+  let colors : [Color] = [.blue, .brown, .cyan, .gray, .green, .pink, .purple, .red, .yellow]
+  let colorIndex = 0
   
   var body: some View {
     VStack {
@@ -29,7 +34,6 @@ struct ContentView: View {
           List {
             ForEach(sessions.all) {
               Text(verbatim: $0.description)
-                .rotationEffect(Angle(degrees: 45), anchor: .bottomLeading)
             }
           }
           
@@ -55,12 +59,21 @@ struct ContentView: View {
               .padding()
               .frame(width: 400, height: 500)
           }
+          
+          Button("Schedule") {
+            showSchedule = true
+          }
+          .sheet(isPresented: $showSchedule) {
+            ScheduleView(rooms: rooms, sessions: sessions, schedule: schedule, showSchedule: $showSchedule, selectedSession: sessions.all.first ?? Session(name:"", duration:0), selectedRoom: rooms.all.first ?? Room(""))
+              .padding()
+              .frame(width: 400, height: 500)
+          }
         }
         .frame(width:300)
         
         Divider()
         
-        CalendarView(rooms: rooms)
+        CalendarView(rooms: rooms, schedule: schedule)
         
         Spacer()
       }  

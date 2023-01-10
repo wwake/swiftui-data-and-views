@@ -24,6 +24,7 @@
 		91778717296BD8EA00F5278F /* ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778716296BD8EA00F5278F /* ScheduleTests.swift */; };
 		91778719296BDAFD00F5278F /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778718296BDAFD00F5278F /* Schedule.swift */; };
 		9177871B296C4EC100F5278F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177871A296C4EC100F5278F /* CalendarView.swift */; };
+		9177871D296C66AE00F5278F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177871C296C66AE00F5278F /* ScheduleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		91778716296BD8EA00F5278F /* ScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTests.swift; sourceTree = "<group>"; };
 		91778718296BDAFD00F5278F /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		9177871A296C4EC100F5278F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		9177871C296C66AE00F5278F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				917786DA296B825D00F5278F /* ContentView.swift */,
 				91778714296BCA5200F5278F /* RoomsView.swift */,
 				9177871A296C4EC100F5278F /* CalendarView.swift */,
+				9177871C296C66AE00F5278F /* ScheduleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				91778711296BA7DB00F5278F /* Session.swift in Sources */,
 				91778709296B85DE00F5278F /* Room.swift in Sources */,
 				91778715296BCA5200F5278F /* RoomsView.swift in Sources */,
+				9177871D296C66AE00F5278F /* ScheduleView.swift in Sources */,
 				9177871B296C4EC100F5278F /* CalendarView.swift in Sources */,
 				9177870F296BA57D00F5278F /* Sessions.swift in Sources */,
 				91778719296BDAFD00F5278F /* Schedule.swift in Sources */,

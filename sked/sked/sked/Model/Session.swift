@@ -24,6 +24,12 @@ extension Session : Equatable {
   }
 }
 
+extension Session: Hashable {
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
+  }
+}
+
 extension Session: Comparable {
   public static func < (lhs: Session, rhs: Session) -> Bool {
     lhs.name < rhs.name
