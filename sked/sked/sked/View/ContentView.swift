@@ -49,6 +49,7 @@ struct ContentView: View {
             ForEach(sessions.all) {
             //  Text(verbatim: $0.scheduled ? "" : " ")
               Text(verbatim: $0.description)
+                .foregroundColor($0.scheduled ? .gray : .black)
             }
           }
                     
