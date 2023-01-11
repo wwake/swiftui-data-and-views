@@ -41,12 +41,13 @@ struct CalendarView: View {
               .bold()
             
             ForEach(rooms.all) { room in 
-              if schedule.isReserved(room, start: time, duration: 1) {
-                Image(systemName: "square.fill")
-                  .foregroundColor(.green)
-              } else {
+              if schedule.isOpen(room, start: time, duration: 1) {
                 Image(systemName: "square.split.diagonal.2x2")
                   .foregroundColor(.gray)
+
+              } else {
+                Image(systemName: "square.fill")
+                  .foregroundColor(.green)
               }
             }
           }

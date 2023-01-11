@@ -23,12 +23,15 @@ public class Schedule : ObservableObject {
     return sessions[index][room] ?? open
   }
   
-  public func isReserved(_ room: Room, start: Int, duration: Int) -> Bool {
-    self[start, room] != open
+  public func isOpen(_ room: Room, start: Int, duration: Int) -> Bool {
+    for time in start..<(start + duration) {
+      if self[time, room] != open { return false }
+    }
+    return true
   }
   
   public func reserve(_ room: Room, _ session: Session, start: Int) {
-    if isReserved(room, start: start, duration: session.duration) { return }
+    if !isOpen(room, start: start, duration: session.duration) { return }
     for timeslot in start..<(start + session.duration) {
       sessions[timeslot][room] = session
     }
