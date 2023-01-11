@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
   @StateObject private var rooms = Rooms()
   @StateObject private var sessions = Sessions()
-  @StateObject private var schedule = Schedule(open: Session(name: "", duration: 1))
+  @StateObject private var schedule = Schedule()
   
   @State private var showRooms = false
   

@@ -1,5 +1,4 @@
-* Enforce that you can't schedule a new session into a busy timeslot
-* Answer isReserved correctly (including duration)
+* Make Schedule own open room
 
 * Demonstrate @State, @StateObject, @ObservedObject, @Binding, @Environment, @EnvironmentState
 

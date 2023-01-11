@@ -8,14 +8,10 @@
 import Foundation
 
 public class Schedule : ObservableObject {
-  let open: Session
+  private let open: Session = Session(name: "Open", duration: 1)
   
   @Published var sessions: [[Room : Session]] = Array(repeating: [:], count: 24)
-  
-  public init(open: Session) {
-    self.open = open
-  }
-  
+    
   public subscript(index: Int, room: Room) -> Session {
     if index < 0 || index >= sessions.count {
       return open

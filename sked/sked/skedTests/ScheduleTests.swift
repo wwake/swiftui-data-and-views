@@ -3,31 +3,28 @@ import XCTest
 
 final class ScheduleTests: XCTestCase {
 
-  func test_KnowsDefaultOpenSession() {
-    let open = Session(name: "Open", duration: 1)
-    let schedule = Schedule(open: open)
+  func test_KnowsTimeslotsDefaultToOpen() {
+    let schedule = Schedule()
     let room = Room("ready")
     
-    XCTAssertEqual(schedule[0, room], open)
+    XCTAssertTrue(schedule.isOpen(room, start: 0, duration: 24))
   }
   
   func test_KnowsCreatedSessions() {
-    let open = Session(name: "Open", duration: 1)
-    let schedule = Schedule(open: open)
+    let schedule = Schedule()
     let room = Room("ready")
     let session = Session(name: "Ice cream", duration:2)
     
     schedule.reserve(room, session, start: 1)
 
-    XCTAssertEqual(schedule[0, room], open)
+    XCTAssertTrue(schedule.isOpen(room, start: 0, duration: 1))
     XCTAssertEqual(schedule[1, room], session)
     XCTAssertEqual(schedule[2, room], session)
-    XCTAssertEqual(schedule[3, room], open)
+    XCTAssertTrue(schedule.isOpen(room, start:3, duration: 21))
   }
   
   func test_WontScheduleIntoBusyRoom() {
-    let open = Session(name: "Open", duration: 1)
-    let schedule = Schedule(open: open)
+    let schedule = Schedule()
     let room = Room("ready")
     let session1 = Session(name: "Ice cream", duration:2)
     schedule.reserve(room, session1, start: 2)
@@ -35,13 +32,12 @@ final class ScheduleTests: XCTestCase {
     let session2 = Session(name: "Candy", duration: 4)
     schedule.reserve(room, session2, start:0)
     
-    XCTAssertEqual(schedule[0, room], open)
+    XCTAssertTrue(schedule.isOpen(room, start:0, duration:2))
     XCTAssertEqual(schedule[2, room], session1)
   }
   
   func test_IsOpenFalseIfAnyTimeslotIsBusy() {
-    let open = Session(name: "Open", duration: 1)
-    let schedule = Schedule(open: open)
+    let schedule = Schedule()
     let room = Room("ready")
     let session1 = Session(name: "Ice cream", duration:2)
     schedule.reserve(room, session1, start: 2)
