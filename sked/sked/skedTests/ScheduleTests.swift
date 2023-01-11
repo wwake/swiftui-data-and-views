@@ -19,7 +19,6 @@ final class ScheduleTests: XCTestCase {
     
     schedule.reserve(room, session, start: 1)
 
-    XCTAssertTrue(session.scheduled)
     XCTAssertEqual(schedule[0, room], open)
     XCTAssertEqual(schedule[1, room], session)
     XCTAssertEqual(schedule[2, room], session)

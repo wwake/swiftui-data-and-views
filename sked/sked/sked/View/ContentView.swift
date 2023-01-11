@@ -49,7 +49,6 @@ struct ContentView: View {
             ForEach(sessions.all) {
             //  Text(verbatim: $0.scheduled ? "" : " ")
               Text(verbatim: $0.description)
-                .foregroundColor($0.scheduled ? .gray : .black)
             }
           }
                     
@@ -65,7 +64,7 @@ struct ContentView: View {
           
           Divider()
           
-          ScheduleView(rooms: rooms, sessions: sessions, schedule: schedule, selectedSession: sessions.all.first ?? Session(name:"", duration:0), selectedRoom: rooms.all.first ?? Room(""))
+          ScheduleView(rooms: rooms, sessions: sessions, schedule: schedule, selectedSession: sessions.all.first ?? Session(name:"(none available)", duration:0), selectedRoom: rooms.all.first ?? Room("(none available)"))
 
         }
         .frame(width:300)

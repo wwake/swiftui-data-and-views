@@ -1,0 +1,5 @@
+* Enforce that you can't schedule a new session into a busy timeslot
+* Schedule picker only shows unscheduled sessions
+* Schedule picker only shows available times
+
+* Demonstrate @State, @StateObject, @ObservedObject, @Binding, @Environment, @EnvironmentState

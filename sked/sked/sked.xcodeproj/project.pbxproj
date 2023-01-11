@@ -25,6 +25,7 @@
 		91778719296BDAFD00F5278F /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91778718296BDAFD00F5278F /* Schedule.swift */; };
 		9177871B296C4EC100F5278F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177871A296C4EC100F5278F /* CalendarView.swift */; };
 		9177871D296C66AE00F5278F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177871C296C66AE00F5278F /* ScheduleView.swift */; };
+		918287E4296F33CB0008B275 /* _todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 918287E3296F33CB0008B275 /* _todo.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		91778718296BDAFD00F5278F /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		9177871A296C4EC100F5278F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		9177871C296C66AE00F5278F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		918287E3296F33CB0008B275 /* _todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = _todo.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		917786CC296B825D00F5278F = {
 			isa = PBXGroup;
 			children = (
+				918287E3296F33CB0008B275 /* _todo.txt */,
 				917786D7296B825D00F5278F /* sked */,
 				917786E9296B826000F5278F /* skedTests */,
 				917786F3296B826000F5278F /* skedUITests */,
@@ -282,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918287E4296F33CB0008B275 /* _todo.txt in Resources */,
 				917786E0296B825F00F5278F /* Preview Assets.xcassets in Resources */,
 				917786DD296B825F00F5278F /* Assets.xcassets in Resources */,
 			);

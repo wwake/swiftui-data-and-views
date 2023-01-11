@@ -15,14 +15,11 @@ struct ScheduleView : View {
   
   @State var selectedSession : Session
   @State var selectedRoom: Room
-  @State var timeSlot = 0
+  @State var selectedTime = 0
   
   var body: some View {
     Text("Schedule")
       .font(.title)
-    
-    Text(verbatim: "\(selectedSession)")
-    Text(verbatim: "\(selectedRoom)")
     
     Form {
       Picker("Session", selection: $selectedSession) {
@@ -33,7 +30,9 @@ struct ScheduleView : View {
       }
       .disabled(sessions.count == 0)
       .onChange(of: sessions.count) { newCount in 
-        if newCount == 1 { selectedSession = sessions.all.first! }
+        if newCount == 1 { 
+          selectedSession = sessions.all.first! 
+        }
       }
       
       Picker("Room", selection: $selectedRoom) {
@@ -43,13 +42,19 @@ struct ScheduleView : View {
       } 
       .disabled(rooms.count == 0)
       .onChange(of: rooms.count) { newCount in 
-        if newCount == 1 { selectedRoom = rooms.all.first! }
+        if newCount == 1 { 
+          selectedRoom = rooms.all.first! 
+        }
       }
 
-      Stepper("Time (h): \(timeSlot)", value: $timeSlot, in:0...23) 
+      Picker("Time (h)", selection: $selectedTime) {
+        ForEach(0..<24) {
+          Text(verbatim: "\($0)")
+        }
+      }
       
       Button("Schedule") {
-        schedule.reserve(selectedRoom, selectedSession, start: timeSlot)
+        schedule.reserve(selectedRoom, selectedSession, start: selectedTime)
       }
       .disabled(rooms.count == 0 || sessions.count == 0)
       
