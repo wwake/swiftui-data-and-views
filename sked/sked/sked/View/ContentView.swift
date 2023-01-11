@@ -14,16 +14,9 @@ struct ContentView: View {
   
   @State private var showRooms = false
   
-  @State private var showSessions = false
-  
   @State private var sessionName: String = ""
   @State private var sessionDuration: Int = 1
-  
-  @State private var showSchedule = false
-  
-  let colors : [Color] = [.blue, .brown, .cyan, .gray, .green, .pink, .purple, .red, .yellow]
-  let colorIndex = 0
-  
+    
   var body: some View {
     VStack {
       HStack {
@@ -47,7 +40,6 @@ struct ContentView: View {
           
           List { 
             ForEach(sessions.all) {
-            //  Text(verbatim: $0.scheduled ? "" : " ")
               Text(verbatim: $0.description)
             }
           }

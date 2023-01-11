@@ -5,3 +5,58 @@ Bonus:
 * Schedule picker only shows unscheduled sessions
 * Schedule picker only shows available times
 
+Examples:
+@State and @Binding:
+* ContentView declares showRooms as @State since it's a value. 
+  @State private var showRooms = false
+
+* When ContentView wants to pass showRooms to RoomsView, it passes the binding:
+  RoomsView(rooms: rooms, showRooms: $showRooms)
+
+* RoomsView declares that linkage with @Binding:
+  @Binding var showRooms: Bool
+
+* RoomsView can set showRooms' value directly and it propagates throughout:
+  showRooms = false
+
+* Discuss how a View receives the binding:
+  Pass in:
+    RoomsView(showRooms: $showRooms)
+  
+  Default initializer: 
+    Assigns the binding to the variable
+    
+  Explicit initializer: 
+    init(showRooms: Binding<Bool>) {   // explicit Binding type
+      self._showRooms = showRooms   // _ sets binding for variable
+    }
+
+
+=======
+@StateObject and @ObservedObject
+* The model object is declared to be an ObservableObject and declares observable fields with @Published:
+public class Sessions : ObservableObject {
+  @Published public var all: [Session] = []
+  :
+}
+
+* ContentView declares and initializes it as a @StateObject:
+  @StateObject private var sessions = Sessions()
+
+* When it wants to pass it down, it passes the variable
+  CalendarView(sessions: sessions ...)
+
+* The child view declares @ObservedObject
+  @ObservedObject var sessions : Sessions
+
+* The child object refers to the object directly:
+      Picker("Session", selection: $selectedSession) {
+        ForEach(sessions.all, id:\.self) {
+          Text(verbatim: "\($0)")
+            .padding()
+        }
+      }
+      .disabled(sessions.count == 0)
+
+* Can use default or custom initializer; the object passes as a regular variable (no Binding<> :)
+

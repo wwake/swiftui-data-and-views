@@ -13,6 +13,11 @@ struct RoomsView: View {
   @Binding var showRooms: Bool
   @State private var roomName: String = ""
   
+  init(rooms: Rooms, showRooms: Binding<Bool>) {
+    self.rooms = rooms
+    self._showRooms = showRooms
+  }
+  
   var body: some View {
     VStack {
       Text("Rooms")

@@ -11,7 +11,7 @@ import SwiftUI
 struct CalendarView: View {
   @ObservedObject var rooms : Rooms
   @ObservedObject var schedule: Schedule
-    
+      
   var body: some View {
     VStack {
       Text("Schedule")
