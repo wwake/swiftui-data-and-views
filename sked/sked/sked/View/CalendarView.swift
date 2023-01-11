@@ -47,7 +47,7 @@ struct CalendarView: View {
 
               } else {
                 Image(systemName: "square.fill")
-                  .foregroundColor(.green)
+                  .foregroundColor(schedule[time, room].color)
               }
             }
           }

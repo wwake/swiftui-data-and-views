@@ -37,4 +37,10 @@ final class SessionsTests : XCTestCase {
     
     XCTAssertEqual(sessions.all, [session4, session2, session1, session3])
   }
+  
+  func testSessionsGetDifferentColors() {
+    let session1 = Session(name: "A", duration: 2)
+    let session2 = Session(name:"B", duration:1)
+    XCTAssertNotEqual(session1.color, session2.color)
+  }
 }

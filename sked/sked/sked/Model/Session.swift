@@ -5,16 +5,22 @@
 //  Created by Bill Wake on 1/8/23.
 //
 
-import Foundation
+import SwiftUI
 
 public class Session : Identifiable {
   public let id = UUID()
   var name: String
   var duration: Int
+  var color: Color
   
   init(name: String, duration: Int) {
     self.name = name
     self.duration = duration
+    
+    self.color = Color(
+      red: .random(in: 0...1),
+      green: .random(in: 0...1),
+      blue: .random(in: 0...1)) 
   }
 }
 

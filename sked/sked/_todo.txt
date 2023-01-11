@@ -1,4 +1,3 @@
-* Make Schedule own open room
 
 * Demonstrate @State, @StateObject, @ObservedObject, @Binding, @Environment, @EnvironmentState
 
