@@ -60,3 +60,6 @@ public class Sessions : ObservableObject {
 
 * Can use default or custom initializer; the object passes as a regular variable (no Binding<> :)
 
+=======
+@EnvironmentObject
+
